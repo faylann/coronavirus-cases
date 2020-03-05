@@ -16,13 +16,11 @@ export default class Counter extends Component {
     axios
       .get('https://coronavirus-tracker-api.herokuapp.com/all')
       .then(response => {
-        console.log(response);
         this.setState({
           confirmed: response.data.latest.confirmed,
           recovered: response.data.latest.recovered,
           deaths: response.data.latest.deaths
         });
-        console.log(this.state.confirmed);
       })
       .catch(error => {
         console.log(error);

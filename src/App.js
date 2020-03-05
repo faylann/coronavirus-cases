@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
 import Counter from './components/Counter';
+import Nav from './components/Nav';
 
 function App() {
   return (
-    <body>
+    <React.Fragment>
+      <Nav />
       <header>
         <h1>Coronavirus Cases</h1>
       </header>
       <Counter />
-    </body>
+    </React.Fragment>
   );
 }
 
